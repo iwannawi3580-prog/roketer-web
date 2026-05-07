@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roketer - Jasa Website 100 Ribu Bondowoso | Hosting Gratis Selamanya</title>
+    <meta name="description" content="Jasa pembuatan website murah Bondowoso mulai 100rb. Hosting gratis selamanya, bonus domain .my.id. Bayar 1x online terus.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        :root {
+            --bg-dark: #0B1120;
+            --bg-card: #0F172A;
+            --bg-card-hover: #1E293B;
+            --blue-primary: #3B82F6;
+            --blue-gradient: linear-gradient(90deg, #3B82F6, #06B6D4);
+            --orange-accent: #F97316;
+            --text-white: #F8FAFC;
+            --text-gray: #94A3B8;
+            --border-color: #1E293B;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg-dark); color: var(--text-white); line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        a { text-decoration: none; color: inherit; }
+        
+        /* Header */
+        header { padding: 20px 0; position: sticky; top: 0; background: rgba(11, 17, 32, 0.8); backdrop-filter: blur(10px); z-index: 100; border-bottom: 1px solid var(--border-color); }
+        .navbar { display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 22px; }
+        .logo img { height: 32px; }
+        .nav-links { display: none; }
+        .nav-links a { margin: 0 15px; color: var(--text-gray); font-weight: 500; font-size: 15px; }
+        .nav-links a:hover { color: var(--text-white); }
+        .btn-wa { background: var(--blue-gradient); padding: 10px 20px; border-radius: 8px; font-weight: 600; font-size: 15px; display: inline-flex; align-items: center; gap: 8px; transition: 0.3s; }
+        .btn-wa:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3); }
+
+        /* Hero */
+        .hero { padding: 100px 0 60px; text-align: center; position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: -200px; left: 50%; transform: translateX(-50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%); z-index: 0; }
+        .hero-content { position: relative; z-index: 2; }
+        .hero-tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(59, 130, 246, 0.1); color: var(--blue-primary); padding: 6px 14px; border-radius: 20px; font-size: 14px; font-weight: 600; margin-bottom: 24px; border: 1px solid rgba(59, 130, 246, 0.2); }
+        .hero h1 { font-size: 42px; font-weight: 800; line-height: 1.1; margin-bottom: 20px; letter-spacing: -1px; }
+        .hero h1 span { background: var(--blue-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: 18px; color: var(--text-gray); max-width: 600px; margin: 0 auto 30px; }
+        .hero-features { display: flex; justify-content: center; gap: 24px; margin: 40px 0; flex-wrap: wrap; }
+        .feature { display: flex; align-items: center; gap: 8px; color: var(--text-gray); font-size: 14px; }
+        .hero-cta { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+        .btn-secondary { background: var(--bg-card); border: 1px solid var(--border-color); padding: 10px 20px; border-radius: 8px; font-weight: 600; font-size: 15px; }
+        .btn-secondary:hover { background: var(--bg-card-hover); }
+        .hero-img { margin-top: 60px; max-width: 1000px; width: 100%; }
+
+        /* Trust Bar */
+        .trust-bar { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 24px; margin: 0 0 80px; }
+        .trust-bar p { color: var(--text-gray); margin-bottom: 16px; font-size: 14px; text-align: center; }
+        .trust-icons { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; font-size: 14px; color: var(--text-gray); }
+
+        /* Pricing */
+        .pricing { padding: 80px 0; }
+        .section-tag { text-align: center; color: var(--blue-primary); font-weight: 600; margin-bottom: 12px; font-size: 14px; }
+        .section-title { text-align: center; font-size: 36px; font-weight: 800; margin-bottom: 12px; letter-spacing: -1px; }
+        .section-desc { text-align: center; color: var(--text-gray); max-width: 500px; margin: 0 auto 60px; }
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 24px; align-items: start; }
+        .price-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 32px; position: relative; transition: 0.3s; }
+        .price-card:hover { transform: translateY(-5px); border-color: var(--blue-primary); }
+        .price-card.popular { border: 2px solid var(--blue-primary); background: linear-gradient(180deg, rgba(59, 130, 246, 0.05) 0%, var(--bg-card) 100%); }
+        .badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--orange-accent); color: white; padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 700; }
+        .price-card h3 { font-size: 13px; color: var(--text-gray); letter-spacing: 1px; font-weight: 600; }
+        .price-card h2 { font-size: 40px; font-weight: 800; margin: 8px 0 4px; color: var(--blue-primary); }
+        .price-card .payment { color: var(--text-gray); font-size: 14px; margin-bottom: 16px; }
+        .price-card .desc { color: var(--text-gray); font-size: 14px; margin-bottom: 28px; min-height: 40px; }
+        .features-list { list-style: none; margin-bottom: 32px; }
+        .features-list li { margin-bottom: 14px; display: flex; align-items: start; gap: 10px; font-size: 15px; }
+        .features-list li.disabled { color: #475569; }
+        .check { color: var(--blue-primary); font-weight: bold; margin-top: 2px; }
+        .btn-pesan { width: 100%; text-align: center; background: var(--bg-dark); border: 1px solid var(--border-color); padding: 14px; border-radius: 8px; font-weight: 600; display: block; transition: 0.3s; }
+        .btn-pesan:hover { background: var(--bg-card-hover); }
+        .price-card.popular .btn-pesan { background: var(--blue-gradient); border: none; }
+        .price-card.popular .btn-pesan:hover { box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3); }
+        .guarantee { text-align: center; margin-top: 40px; color: var(--text-gray); font-size: 14px; display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
+
+        /* Steps */
+        .steps { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 60px 40px; margin: 80px 0; }
+        .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-top: 50px; text-align: center; }
+        .step-icon { width: 56px; height: 56px; background: var(--blue-gradient); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 24px; }
+        .step h4 { font-size: 18px; margin-bottom: 8px; }
+        .step p { color: var(--text-gray); font-size: 14px; }
+
+        /* Footer */
+        footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--border-color); color: var(--text-gray); font-size: 14px; }
+        
+        /* Floating WA */
+        .floating-wa { position: fixed; bottom: 20px; right: 20px; background: #25D366; width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4); z-index: 99; transition: 0.3s; }
+        .floating-wa:hover { transform: scale(1.1); }
+
+        @media (min-width: 768px) { 
+            .nav-links { display: flex; } 
+            .hero h1 { font-size: 64px; } 
+            .pricing-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <!-- WA Floating -->
+    <a href="https://wa.me/6282231444865?text=Halo%20Roketer,%20saya%20mau%20konsultasi%20website" class="floating-wa">💬</a>
+
+    <!-- Header -->
+    <header>
+        <div class="container navbar">
+            <div class="logo">
+                <img src="img/logo.webp" alt="Roketer Logo">
+                roketer
+            </div>
+            <nav class="nav-links">
+                <a href="#beranda">Beranda</a>
+                <a href="#paket">Paket</a>
+                <a href="#fitur">Fitur</a>
+                <a href="#carakerja">Cara Order</a>
+            </nav>
+            <a href="https://wa.me/6282231444865?text=Halo%20Roketer,%20saya%20mau%20konsultasi" class="btn-wa">
+                <span>💬</span> Order via WhatsApp
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="beranda" class="hero">
+        <div class="container hero-content">
+            <div class="hero-tag">🚀 JASA PEMBUATAN WEBSITE MODERN</div>
+            <h1>Website Modern.<br>Cepat. Profesional.<br><span>Harga Terjangkau.</span></h1>
+            <p>Roketer bantu bisnis, UMKM, hingga personal brand punya website modern tanpa biaya bulanan. Bayar 1x, online selamanya pake teknologi Cloudflare.</p>
+            <div class="hero-features">
+                <div class="feature">⚡ Pengerjaan 1-2 Hari</div>
+                <div class="feature">🛡️ Aman & Gembok SSL</div>
+                <div class="feature">📱 Modern & Responsive</div>
+                <div class="feature">💬 Support via WhatsApp</div>
+            </div>
+            <div class="hero-cta">
+                <a href="https://wa.me/6282231444865?text=Halo%20Roketer,%20saya%20mau%20order%20website" class="btn-wa">
+                    <span>💬</span> Order via WhatsApp
+                </a>
+                <a href="#paket" class="btn-secondary">Lihat Paket Harga →</a>
+            </div>
+            <img src="img/hero.webp" alt="Website Modern Roketer" class="hero-img">
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="container">
+        <div class="trust-bar">
+            <p>Dipercaya oleh berbagai jenis bisnis di Bondowoso</p>
+            <div class="trust-icons">
+                <span>🏪 UMKM</span>
+                <span>🚀 Startup</span>
+                <span>🏢 Perusahaan</span>
+                <span>👤 Personal Brand</span>
+                <span>👥 Komunitas</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="paket" class="pricing">
+        <div class="container">
+            <div class="section-tag">PAKET HARGA TERJANGKAU</div>
+            <h2 class="section-title">Pilih Paket yang Sesuai Kebutuhanmu</h2>
+            <p class="section-desc">Semua paket sudah termasuk hosting gratis selamanya, SSL, dan garansi support.</p>
+            
+            <div class="pricing-grid">
+                <!-- Starter -->
+                <div class="price-card">
+                    <h3>PAKET STARTER</h3>
+                    <h2>Rp 100.000</h2>
+                    <p class="payment">One Time Payment</p>
+                    <p class="desc">Cocok untuk personal, portofolio, atau bisnis kecil yang baru mulai.</p>
+                    <ul class="features-list">
+                        <li><span class="check">✓</span> 1 Halaman Landing Page</li>
+                        <li><span class="check">✓</span> Desain Template Premium</li>
+                        <li><span class="check">✓</span> <b>Hosting Gratis Selamanya</b></li>
+                        <li><span class="check">✓</span> SSL Certificate (HTTPS)</li>
+                        <li><span class="check">✓</span> Tombol WhatsApp & Sosmed</li>
+                        <li><span class="check">✓</span> Gratis File Source Code</li>
+                        <li><span class="check">✓</span> Revisi Teks/Gambar 2x</li>
+                        <li class="disabled"><span class="check">✗</span> Domain beli sendiri</li>
+                    </ul>
+                    <a href="https://wa.me/6282231444865?text=Halo%20Roketer,%20saya%20mau%20pesan%20Paket%20Starter%20100rb" class="btn-pesan">Pesan Sekarang</a>
+                </div>
+
+                <!-- Business -->
+                <div class="price-card popular">
+                    <div class="badge">🔥 PALING LARIS</div>
+                    <h3>PAKET BUSINESS</h3>
+                    <h2>Rp 150.000</h2>
+                    <p class="payment">One Time Payment</p>
+                    <p class="desc">Cocok untuk bisnis, company profile, atau landing page profesional.</p>
+                    <ul class="features-list">
+                        <li><span class="check">✓</span> <b>Semua fitur Paket Starter</b></li>
+                        <li><span class="check">✓</span> <b>BONUS Domain .my.id GRATIS 1 Tahun</b></li>
+                        <li><span class="check">✓</span> Up to 3 Halaman</li>
+                        <li><span class="check">✓</span> Integrasi Google Maps</li>
+                        <li><span class="check">✓</span> Form Kontak Masuk ke WA</li>
+                        <li><span class="check">✓</span> Optimasi Basic SEO</li>
+                        <li><span class="check">✓</span> Support Prioritas</li>
+                    </ul>
+                    <a href="https://wa.me/6282231444865?text=Halo%20Roketer,%20saya%20mau%20pesan%20Paket%20Business%20150rb" class="btn-pesan">Pesan Sekarang</a>
+                </div>
+
+                <!-- Enterprise -->
+                <div class="price-card">
+                    <h3>PAKET PRO</h3>
+                    <h2>Rp 500.000</h2>
+                    <p class="payment">One Time Payment</p>
+                    <p class="desc">Solusi lengkap untuk bisnis yang butuh fitur lebih kompleks.</p>
+                    <ul class="features-list">
+                        <li><span class="check">✓</span> <b>Semua fitur Paket Business</b></li>
+                        <li><span class="check">✓</span> <b>BONUS Domain .com GRATIS 1 Tahun</b></li>
+                        <li><span class="check">✓</span> Up to 5 Halaman + Blog</li>
+                        <li><span class="check">✓</span> Desain Semi-Custom</li>
+                        <li><span class="check">✓</span> Integrasi Pixel FB & TikTok</li>
+                        <li><span class="check">✓</span> Video Tutorial Edit Website</li>
+                        <li><span class="check">✓</span> GRATIS Update 3x di bulan pertama</li>
+                    </ul>
+                    <a href="https://wa.me/6282231444865?text=Halo%20Roketer,%20saya%20mau%20pesan%20Paket%20Pro%20500rb" class="btn-pesan">Pesan Sekarang</a>
+                </div>
+            </div>
+            <div class="guarantee">
+                <span>🛡️ Garansi 7 Hari Revisi</span>
+                <span>💯 100% Kepuasan</span>
+                <span>✅ Cocok Baru Bayar</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Steps -->
+    <section id="carakerja" class="container">
+        <div class="steps">
+            <div class="section-tag">CARA ORDER MUDAH</div>
+            <h2 class="section-title">3 Langkah Mudah Punya Website Impian</h2>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-icon">💬</div>
+                    <h4>1. Chat via WhatsApp</h4>
+                    <p>Konsultasikan kebutuhan website kamu secara GRATIS. Kirim materi foto & teks.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">⚡</div>
+                    <h4>2. Kami Kerjakan 1-2 Hari</h4>
+                    <p>Tim Roketer langsung proses. Kamu akan dikabari kalau website sudah live untuk review.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">✅</div>
+                    <h4>3. Cocok Baru Bayar</h4>
+                    <p>Setelah kamu cek & setuju, baru lakukan pembayaran. File source code langsung kami kirim.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Roketer. Jasa Website Murah Bondowoso. Hosting Gratis Selamanya.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
