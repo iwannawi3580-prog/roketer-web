@@ -102,11 +102,11 @@
         </div>
     </header>
 
-<!-- HERO SECTION - PAKE GAMBAR UTUH YANG UDAH NYATU -->
-<section class="relative bg-dark-950 min-h-screen overflow-hidden">
-    <!-- Background Gradient Biru -->
-    <div class="absolute inset-0 bg-gradient-to-br from-dark-950 via-dark-900 to-blue-950/40"></div>
-    <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary-600/10 to-transparent"></div>
+<!-- HERO SECTION - FIX GELAP -->
+<section class="relative bg-[#020617] min-h-screen overflow-hidden">
+    <!-- Hapus gradient tebel, ganti glow tipis aja -->
+    <div class="absolute top-0 right-1/4 w-[800px] h-[800px] bg-primary-500/10 blur-3xl rounded-full"></div>
+    <div class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-blue-600/10 blur-3xl rounded-full"></div>
 
     <!-- Konten Kiri -->
     <div class="relative z-10 container mx-auto px-6 max-w-7xl">
@@ -132,12 +132,14 @@
                             <p class="font-bold">Cepat</p>
                             <p class="text-xs text-slate-500">Pengerjaan Kilat</p>
                         </div>
+                    </div>
                     <div class="flex items-center gap-3 text-sm font-medium text-slate-300">
                         <i class="fa-solid fa-shield-halved text-blue-500 bg-blue-500/10 p-2 rounded-lg"></i>
                         <div>
                             <p class="font-bold">Aman</p>
                             <p class="text-xs text-slate-500">& Terpercaya</p>
                         </div>
+                    </div>
                     <div class="flex items-center gap-3 text-sm font-medium text-slate-300">
                         <i class="fa-solid fa-code text-cyan-500 bg-cyan-500/10 p-2 rounded-lg"></i>
                         <div>
@@ -169,12 +171,11 @@
         </div>
     </div>
 
-    <!-- GAMBAR FULL BLEED KANAN - PAKE FILE YANG UDAH NYATU -->
-    <div class="absolute top-0 right-0 w-full lg:w-1/2 h-full">
-        <img src="img/hero-full.webp" alt="Roketer Website" class="w-full h-full object-cover object-left">
+    <!-- GAMBAR FULL BLEED KANAN - UDAH DI FIX -->
+    <div class="absolute top-0 right-0 w-full lg:w-[55%] h-full z-0">
+        <img src="img/hero-full.webp" alt="Roketer Website" class="w-full h-full object-cover object-left" onerror="this.style.display='none'">
     </div>
 </section>
-
     <!-- TRUST SECTION -->
     <section class="py-12 border-y border-slate-200 dark:border-white/5 bg-slate-50 dark:bg-white/[0.02]">
         <div class="container mx-auto px-6 text-center">
