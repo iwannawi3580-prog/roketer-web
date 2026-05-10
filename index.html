@@ -105,13 +105,16 @@
 <!-- HERO SECTION ROKETER - FINAL 99.9% MIRIP -->
 <section class="relative min-h-screen lg:min-h-[800px] flex items-center bg-[#020617] overflow-hidden">
 
-  <!-- GAMBAR BACKGROUND - UDAH DIGESER + DIKECILIN -->
-  <div class="absolute inset-0 z-0">
-    <img src="img/hero-full.webp" alt="Roketer Website Modern"
-         class="w-full h-full object-cover object-[50%_50%] lg:scale-90 lg:object-[52%_50%]">
-    <div class="absolute inset-0 bg-gradient-to-r from-[#020617] from-0% via-[#020617]/95 via-45% to-transparent to-85%"></div>
-    <div class="absolute top-1/2 left-[50%] -translate-y-1/2 w-[600px] h-[600px] bg-primary-600/20 blur-[120px] rounded-full"></div>
-  </div>
+  <!-- GANTI DIV GAMBAR INI AJA, YANG LAIN JANGAN DIUBAH -->
+<!-- 1. GAMBAR BACKGROUND - UDAH FIX KEPOTONG + ITEM -->
+<div class="absolute inset-0 z-0">
+  <img src="img/hero-full.webp" alt="Roketer Website Modern"
+       class="w-full h-full object-cover object-[45%_50%]">
+  <!-- 2. OVERLAY GRADIENT - DILUASIN DIKIT BIAR NGGAK NABRAK ROKET -->
+  <div class="absolute inset-0 bg-gradient-to-r from-[#020617] from-0% via-[#020617]/95 via-40% to-transparent to-75%"></div>
+  <!-- 3. GLOW BIRU -->
+  <div class="absolute top-1/2 left-[45%] -translate-y-1/2 w-[600px] h-[600px] bg-primary-600/20 blur-[120px] rounded-full"></div>
+</div>
 
   <!-- KONTEN -->
   <div class="relative z-20 max-w-7xl mx-auto px-6 w-full py-32 lg:py-0">
